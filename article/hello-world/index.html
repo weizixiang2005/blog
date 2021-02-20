@@ -9,6 +9,30 @@
       var targetProtocol = "https:";
       if (window.location.protocol != targetProtocol) window.location.href = targetProtocol + window.location.href.substring(window.location.protocol.length);
     </script>
+	<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+	<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+	
+	
+<script>	
+	const gitment = new Gitment({
+  id: 'Your page ID', // optional
+  owner: 'weizixiang2005',
+  repo: 'blog',
+  oauth: {
+    client_id: 'b4c37a6102cf5b858c02',
+    client_secret: 'c3760bf0f5e62b768b99f72b987f316bcfef65d2',
+  },
+  // ...
+  // For more available options, check out the documentation below
+})
+
+gitment.render('comments')
+// or
+// gitment.render(document.getElementById('comments'))
+// or
+// document.body.appendChild(gitment.render())
+	</script>
+	
 <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="//cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
